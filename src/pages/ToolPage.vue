@@ -129,7 +129,7 @@ async function evaluate() {
       category.name.replace(/ - .+?$/gi, '').replace(/[^\x00-\xff]/g, '00')
         .length > 8
     ) {
-      if (category.name.match('By')) {
+      if (category.name.replace(/ - .+?$/gi, '').match('By')) {
         const item: problem = {
           type: 'error',
           description: '作者等说明信息未置于分类说明中',
