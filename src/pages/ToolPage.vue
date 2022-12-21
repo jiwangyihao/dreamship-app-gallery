@@ -127,7 +127,7 @@ async function evaluate() {
       problemList.value.add(item);
     } else if (
       category.name.replace(/ - .+?$/gi, '').replace(/[^\x00-\xff]/g, '00')
-        .length > 8
+        .length > 10
     ) {
       if (category.name.replace(/ - .+?$/gi, '').match('By')) {
         const item: problem = {
@@ -690,7 +690,7 @@ const card = {
                   <li>分类说明：可选。尽可能添加，要求语言简洁明了</li>
                   <li>
                     分类名：必需。应尽可能简洁，不要包含『类』这样的无效字眼，至多
-                    8 个字节（4 个汉字/8 个字母）
+                    10 个字节（5 个汉字/10 个字母）
                   </li>
                   <li>
                     如果感觉分类名表达不准确，请添加分类说明，而不是使用更长的分类名
